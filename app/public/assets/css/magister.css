@@ -48,7 +48,7 @@ body {
 	        transition: all .45s;
 	        float: left;
 }
-				
+
 .navbar-toggle .icon-bar {
   display: block;
   width: 22px;
@@ -403,8 +403,7 @@ span {
 }
 
 @media (max-width: 992px){
-	.title
-	{ 
+	.title { 
 		font-family: 'Wire One', Helvetica, Arial, sans-serif;
 		font-weight:normal;
 		font-size:8em;
@@ -412,35 +411,54 @@ span {
 		margin-bottom:15px;
 		line-height:1em;
 		letter-spacing: .4em;
-		text-indent: .2em;
+		text-indent: .3em;
 	}
-}
 
-
-@media (max-width: 767px){
-		.title
-		{ 
-			font-family: 'Wire One', Helvetica, Arial, sans-serif;
-			font-weight:normal;
-			font-size:7em;
-			margin-top: 0px;
-			margin-bottom:15px;
-			line-height:1em;
-			letter-spacing: .4em;
-			text-indent: .2em;
-		}
-
-		.subtitle { 
-		line-height:.9em;
+	.subtitle { 
+		line-height:.8em;
 		font-size:2.8em;
 		margin-top:0;
 		margin-bottom:30px; 
 		letter-spacing: .1em;
-		text-indent: .05em;
+		
 	}
 
 	.tagline { 
 		font-size:1em;
+		line-height:1.3em;
+		font-weight: normal;
+		margin-bottom:75px;
+		letter-spacing: .1em;
+		text-indent: .05em;
+	}
+
+	
+}
+
+
+@media (max-width: 767px){
+	.title { 
+		font-family: 'Wire One', Helvetica, Arial, sans-serif;
+		font-weight:normal;
+		font-size:5em;
+		margin-top: 0px;
+		margin-bottom:15px;
+		line-height:1em;
+		letter-spacing: .4em;
+		text-indent: .4em; 
+	}
+
+	.subtitle { 
+		line-height:.9em;
+		font-size:2.4em;
+		margin-top:0;
+		margin-bottom:30px; 
+		letter-spacing: .1em;
+	
+	}
+
+	.tagline { 
+		font-size:.8em;
 		line-height:1.3em;
 		font-weight: normal;
 		margin-bottom:75px;
