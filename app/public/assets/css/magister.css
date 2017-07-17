@@ -48,19 +48,23 @@ body {
 	        transition: all .45s;
 	        float: left;
 }
+				
 .navbar-toggle .icon-bar {
   display: block;
   width: 22px;
   height: 2px;
   background: #fff;
 }
+
 .navbar-toggle .icon-bar + .icon-bar {
 	margin-top: 4px;
 }
+
 .open .navbar-toggle { 
 	top:-70px; 
 	opacity: 0;  
 }
+
 .mainmenu .dropdown-menu {
 	top: -14em;
 	left: 0px;
@@ -77,13 +81,16 @@ body {
 	   -moz-transition: all .45s;
 	        transition: all .45s;
 }
+			
 .mainmenu .dropdown-menu .active { 
 	font-weight:bold;
 }
+
 .mainmenu .open .dropdown-menu { 
 	top:2px;
 	opacity:1;
 }
+
 .mainmenu .dropdown-menu a { 
 	padding:10px 10px;
 	margin:0;
@@ -93,13 +100,12 @@ body {
 	   -moz-border-radius: 2px;
 	        border-radius: 2px;
 }
+
 .mainmenu .dropdown-menu a:hover { 
 	background:rgba(255,255,255,.1);
 	color:white;
 	padding:10px 8px 10px 12px;
 }
-
-
 
 /********************************************************/
 /*             Sections - universal classes             */
@@ -110,20 +116,16 @@ body {
 	width: 100%; 
 	overflow:visible;
 	height:100%;
-	padding-top:70px;
+	padding-top:100px;
 	padding-bottom:50px; 
 	display:none;
 	top:0;
 } 
-/* @media (min-width: 768px) {
-	.section { padding-top:160px;}
-} */
 
 /* Show one of sections */
 #head { 
 	display: block;
 }
-
 
 /********************************************************/
 /*                      Typography                      */
@@ -145,19 +147,25 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	color:#FDF9F4; 
 	line-height:1em;
 	letter-spacing: .5em;
+	text-indent: .25em;
 }
+
 .subtitle { 
 	line-height:.9em;
-	font-size:3.5em;
+	font-size:3.0em;
 	margin-top:0;
 	margin-bottom:40px; 
 	letter-spacing: .1em;
+	text-indent: .05em;
+	font-weight: normal;
 }
+
 .tagline { 
-	font-size:1.4em;
+	font-size:1.2em;
 	line-height:1.3em;
-	font-weight: lighter;
+	font-weight: normal;
 	margin-bottom:75px;
+	letter-spacing: .1em;
 }
 
 @media (max-width: 767px) {
@@ -165,7 +173,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 		font-size:1.3em;
 	}
 }
-
 
 /********************************************************/
 /*                   UI - Buttons                       */
@@ -206,8 +213,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	background: rgba(255,255,255,.5);
 }
 
-
-
 /********************************************************/
 /*                 UI - Thumbnails                      */
 /********************************************************/
@@ -223,8 +228,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	color: inherit;
 }
 
-
-
 /********************************************************/
 /*                 Everything else                      */
 /********************************************************/
@@ -236,7 +239,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	text-decoration: none; 
 }
 
-
 /* Social buttons in the footer */
 #social { 
 	margin-top:50px;
@@ -246,9 +248,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	width:340px; 
 	margin:0 auto;
 }
-
-
-
 
 /***********************************************************/
 /*                   Theme: text shadows                   */
@@ -267,7 +266,6 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 .text-shadows .mainmenu .dropdown-menu a:hover { 
 	text-shadow:none;
 }
-
 
 
 /***********************************************************/
@@ -323,13 +321,14 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	color:#fff;
 }
 .theme-invert .btn-primary {
-	background: rgba(0,0,0,.2);
+		background: rgba(255,255,255,.16);
+		margin: 30px 0;
 }
 .theme-invert .btn-primary:hover,
 .theme-invert .btn-primary:focus,
 .theme-invert .btn-primary:active,
 .theme-invert .btn-primary.active {
-	background: rgba(0,0,0,.3);
+	background: rgba(255,255,255,.3);
 	color:#fff;
 }
 
@@ -348,25 +347,60 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 
 .question{
 	font-family: "Wire One";
-	line-height:.9em;
-	font-size:3.5em;
+	line-height:1em;
+	font-size:3.0em;
 	margin-top:0;
 	margin-bottom:0px; 
 	letter-spacing: .1em;
 }
+
 .answer{
 	font-family: "Wire One";
-	font-size:2.4em;
-	line-height:1.3em;
-	font-weight: lighter;
+	font-size:2.6em;
+	line-height:0.8em;
+	font-weight: normal;
 	margin-top:5px;
 	margin-bottom:10px;
+	letter-spacing: 0.08em;
 }
 
 .optionText {
+	color: black;
+}
+
+span {
+	color: white;
+}
+
+.chosen-container {
+	margin-top: 5px;
+}
+
+.questions {
+	margin-bottom: 20px;
+}
+
+#surveyTitle {
+	border: 1px solid white;
+	padding: 8px;
+}
+
+.chosen-container-single, .chosen-single {
+    background-color: black !important;
+		background:black !important;     
+}
+
+.error {
 	color: red;
 }
 
+.errorMessage {
+	color: red;
+	 font-size: 1.5em;
+	margin-top: 25px; 
+	letter-spacing: .5em;
+	font-weight: lighter;
+}
 
 @media (max-width: 992px){
 	.title
@@ -374,35 +408,62 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 		font-family: 'Wire One', Helvetica, Arial, sans-serif;
 		font-weight:normal;
 		font-size:8em;
+		margin-top: 20px;
 		margin-bottom:15px;
 		line-height:1em;
 		letter-spacing: .4em;
+		text-indent: .2em;
 	}
 }
 
 
 @media (max-width: 767px){
-	.title
-	{ 
-		font-family: 'Wire One', Helvetica, Arial, sans-serif;
-		font-weight:normal;
-		font-size:7em;
-		margin-bottom:15px;
-		line-height:1em;
-		letter-spacing: .4em;
+		.title
+		{ 
+			font-family: 'Wire One', Helvetica, Arial, sans-serif;
+			font-weight:normal;
+			font-size:7em;
+			margin-top: 0px;
+			margin-bottom:15px;
+			line-height:1em;
+			letter-spacing: .4em;
+			text-indent: .2em;
+		}
+
+		.subtitle { 
+		line-height:.9em;
+		font-size:2.8em;
+		margin-top:0;
+		margin-bottom:30px; 
+		letter-spacing: .1em;
+		text-indent: .05em;
 	}
 
-	.subtitle { 
-	line-height:.9em;
-	font-size:3.0em;
+	.tagline { 
+		font-size:1em;
+		line-height:1.3em;
+		font-weight: normal;
+		margin-bottom:75px;
+		letter-spacing: .1em;
+		text-indent: .05em;
+	}
+
+	.question {
+	font-family: "Wire One";
+	line-height:1em;
+	font-size: 2.5em;
 	margin-top:0;
-	margin-bottom:30px; 
+	margin-bottom:0px; 
 	letter-spacing: .1em;
-}
-.tagline { 
-	font-size:1.4em;
-	line-height:1.3em;
-	font-weight: lighter;
-	margin-bottom:75px;
-}
+	}
+
+	.answer {
+		font-family: "Wire One";
+		font-size:2.0em;
+		line-height:1em;
+		font-weight: normal;
+		margin-top:5px;
+		margin-bottom:10px;
+		letter-spacing: 0.08em;
+	}
 }

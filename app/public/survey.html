@@ -5,43 +5,36 @@
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
-	
 	<title>FriendFinder</title>
-
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
-	
 	<!-- Bootstrap itself -->
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
 	<!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/magister.css">
-  
   <!-- Animate.css -->
   <link rel="stylesheet" href="assets/css/animate.css"> 
-
   <!-- Chosen.css -->
   <link rel="stylesheet" href="assets/css/chosen.css"> 
-
+  <!-- Font Awesome CDN-->
+  <script src="https://use.fontawesome.com/c38831e163.js"></script>
 	<!-- Fonts -->
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 </head>
 
 <!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
-<body class="theme-invert">
-
-<nav class="mainmenu">
+<body class="theme-invert" style="background:black url(../images/body6.jpg)">
+<nav class="mainmenu" style="background-color: black">
 	<div class="container">
 		<div class="dropdown">
 			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
 			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<li><a href="/">Home</a></li>
+				<li><a href="">Home</a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
-
 
 <!-- Main (Home) section -->
 <section class="section" id="head">
@@ -49,77 +42,256 @@
 
 		<div class="row">
 			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
-				<h2 class="subtitle">SURVEY</h2>
+				<h2 class="subtitle" id="surveyTitle" style="letter-spacing: .3em; font-size: 5em">SURVEY</h2>
 				<h3 class="tagline"></h3>
-			</div> <!-- /col -->
-		</div> <!-- /row -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
-        <h2 class="question">Question 1</h2>
-        <h3 class="answer">You prefer a quite night at home to a night out on the town</h3>
-        <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q1">
-          <option value class="optionText"></option>
-          <option value="1" class="optionText">1 (Strongly Disagree)</option>
-          <option value="2" class="optionText">2</option>
-          <option value="3" class="optionText">3</option>
-          <option value="4" class="optionText">4</option>
-          <option value="5" class="optionText">5 (Strongly Agree)</option>
-        </select>
-      </div> 
-    </div>
+      </div> <!-- /col -->
+      
+    <!-- SURVEY FORM - 10 QUESTIONS -->
+    <form id="surveyForm">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <h2 class="question"><b>Question 1</b></h2>
+          <h3 class="answer">You prefer a quiet night at home to a night out on the town</h3>
+          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q1" name="select1">
+            <option value="" class="optionText"></option>
+            <option value="1" class="optionText">1 (Strongly Disagree)</option>
+            <option value="2" class="optionText">2</option>
+            <option value="3" class="optionText">3</option>
+            <option value="4" class="optionText">4</option>
+            <option value="5" class="optionText">5 (Strongly Agree)</option>
+          </select>
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <h2 class="question"><b>Question 2</b></h2>
+          <h3 class="answer">Loud people are vexatious to the spirit</h3>
+          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q2" name="select2">
+            <option value="" class="optionText"></option>
+            <option value="1" class="optionText">1 (Strongly Disagree)</option>
+            <option value="2" class="optionText">2</option>
+            <option value="3" class="optionText">3</option>
+            <option value="4" class="optionText">4</option>
+            <option value="5" class="optionText">5 (Strongly Agree)</option>
+          </select>
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <h2 class="question"><b>Question 3</b></h2>
+          <h3 class="answer">You rarely do something just out of sheer curiosity.</h3>
+          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q3" name="select3">
+            <option value="" class="optionText"></option>
+            <option value="1" class="optionText">1 (Strongly Disagree)</option>
+            <option value="2" class="optionText">2</option>
+            <option value="3" class="optionText">3</option>
+            <option value="4" class="optionText">4</option>
+            <option value="5" class="optionText">5 (Strongly Agree)</option>
+          </select>
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <h2 class="question"><b>Question 4</b></h2>
+          <h3 class="answer">People can rarely upset you.</h3>
+          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q4" name="select4">
+            <option value="" class="optionText"></option>
+            <option value="1" class="optionText">1 (Strongly Disagree)</option>
+            <option value="2" class="optionText">2</option>
+            <option value="3" class="optionText">3</option>
+            <option value="4" class="optionText">4</option>
+            <option value="5" class="optionText">5 (Strongly Agree)</option>
+          </select>
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <h2 class="question"><b>Question 5</b></h2>
+          <h3 class="answer">It is often difficult for you to relate to other people’s feelings.</h3>
+          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q5" name="select5">
+            <option value="" class="optionText"></option>
+            <option value="1" class="optionText">1 (Strongly Disagree)</option>
+            <option value="2" class="optionText">2</option>
+            <option value="3" class="optionText">3</option>
+            <option value="4" class="optionText">4</option>
+            <option value="5" class="optionText">5 (Strongly Agree)</option>
+          </select>
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <h2 class="question"><b>Question 6</b></h2>
+          <h3 class="answer">In a discussion, truth should be more important than people’s sensitivities.</h3>
+          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q6" name="select6">
+            <option value="" class="optionText"></option>
+            <option value="1" class="optionText">1 (Strongly Disagree)</option>
+            <option value="2" class="optionText">2</option>
+            <option value="3" class="optionText">3</option>
+            <option value="4" class="optionText">4</option>
+            <option value="5" class="optionText">5 (Strongly Agree)</option>
+          </select>
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <h2 class="question"><b>Question 7</b></h2>
+          <h3 class="answer">Everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
+          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q7" name="select7">
+            <option value="" class="optionText"></option>
+            <option value="1" class="optionText">1 (Strongly Disagree)</option>
+            <option value="2" class="optionText">2</option>
+            <option value="3" class="optionText">3</option>
+            <option value="4" class="optionText">4</option>
+            <option value="5" class="optionText">5 (Strongly Agree)</option>
+          </select>
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <h2 class="question"><b>Question 8</b></h2>
+          <h3 class="answer">Generally speaking, you rely more on your experience than your imagination.</h3>
+          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q8" name="select8">
+            <option value="" class="optionText"></option>
+            <option value="1" class="optionText">1 (Strongly Disagree)</option>
+            <option value="2" class="optionText">2</option>
+            <option value="3" class="optionText">3</option>
+            <option value="4" class="optionText">4</option>
+            <option value="5" class="optionText">5 (Strongly Agree)</option>
+          </select>
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <h2 class="question"><b>Question 9</b></h2>
+          <h3 class="answer">You feel more energetic after spending time with a group of people.</h3>
+          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q9" name="select9">
+            <option value="" class="optionText"></option>
+            <option value="1" class="optionText">1 (Strongly Disagree)</option>
+            <option value="2" class="optionText">2</option>
+            <option value="3" class="optionText">3</option>
+            <option value="4" class="optionText">4</option>
+            <option value="5" class="optionText">5 (Strongly Agree)</option>
+          </select>
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <h2 class="question"><b>Question 10</b></h2>
+          <h3 class="answer">You are more comfortable with intermittent moments of silence when in the company of others rather than consistent conversation</h3>
+          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q10" name="select10">
+            <option value="" class="optionText"></option>
+            <option value="1" class="optionText">1 (Strongly Disagree)</option>
+            <option value="2" class="optionText">2</option>
+            <option value="3" class="optionText">3</option>
+            <option value="4" class="optionText">4</option>
+            <option value="5" class="optionText">5 (Strongly Agree)</option>
+          </select>
+        </div> 
+      </div>
+      <div class="errorMessage text-center animated pulse infinite"><span></span></div>   <!-- hidden placeholder div for jQuery Validate error message -->
+      <br>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xs-offset-3 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="surveySubmit"><i class="fa fa-check-circle" aria-hidden="true"></i> SUBMIT</button>
+      </div>          
+    </form>
 	</div>
 </section>
-
-<!-- Second (About) section -->
-<section class="section" id="about">
-	<div class="container">
-	
-		<h2 class="text-center title">About Me</h2>
-		<div class="row">
-			<div class="col-sm-4 col-sm-offset-2">    
-				<h5><strong>Where's my lorem ipsum?<br></strong></h5>
-				<p>Well, here it is: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, ullam, ducimus, eaque, ex autem est dolore illo similique quasi unde sint rerum magnam quod amet iste dolorem ad laudantium molestias enim quibusdam inventore totam fugit eum iusto ratione alias deleniti suscipit modi quis nostrum veniam fugiat debitis officiis impedit ipsum natus ipsa. Doloremque, id, at, corporis, libero laborum architecto mollitia molestiae maxime aut deserunt sed perspiciatis quibusdam praesentium consectetur in sint impedit voluptates! Deleniti, sequi voluptate recusandae facere nostrum?</p>    
-			</div>
-			<div class="col-sm-4">
-				<h5><strong>More, more lipsum!<br></strong></h5>    
-				<p>Tempore, eos, voluptatem minus commodi error aut eaque neque consequuntur optio nesciunt quod quibusdam. Ipsum, voluptatibus, totam, modi perspiciatis repudiandae odio ad possimus molestias culpa optio eaque itaque dicta quod cupiditate reiciendis illo illum aspernatur ducimus praesentium quae porro alias repellat quasi cum fugiat accusamus molestiae exercitationem amet fugit sint eligendi omnis adipisci corrupti. Aspernatur.</p>    
-				<h5><strong>Author links<br></strong></h5>    
-				<p><a href="http://be.net/pozhilov9409">Behance</a> / <a href="https://twitter.com/serggg">Twitter</a> / <a href="http://linkedin.com/pozhilov">LinkedIn</a> / <a href="https://www.facebook.com/pozhilov">Facebook</a></p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Third (Contact) section -->
-<section class="section" id="contact">
-	<div class="container">
-	
-		<h2 class="text-center title">Get in touch</h2>
-
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2 text-center">
-				<p class="lead">Have a question about this template, or want to suggest a new feature?</p>
-				<p>Feel free to email me, or drop me a line in Twitter!</p>
-				<p><b>gt@gettemplate.com</b><br><br></p>
-				<ul class="list-inline list-social">
-					<li><a href="https://twitter.com/serggg" class="btn btn-link"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
-					<li><a href="https://github.com/pozhilov" class="btn btn-link"><i class="fa fa-github fa-fw"></i> Github</a></li>
-					<li><a href="http://linkedin/in/pozhilov" class="btn btn-link"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a></li>
-				</ul>
-			</div>
-		</div>
-
-	</div>
-</section>
-
 
 <!-- Load js libs only when the page is loaded. -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="assets/js/modernizr.custom.72241.js"></script>
 <script src="assets/js/chosen.jquery.js"></script>
+<script src="assets/js/jquery.validate.js"></script>
 <script>
-  $(".chosen-select").chosen({ width: "210px", height: "204px", disable_search: true});
+   $(document).ready(function(){
+      $(".chosen-select").chosen({ width: "210px", height: "204px"});   // initialize the jQuery Chosen Plugin
+      $.validator.setDefaults({                                         // set some defaults for jQuery Validate Plugin
+        ignore: ":hidden:not(.chosen-select), .chosen-search-input", 
+        debug: true,
+        success: "valid",
+        disable_search: true,
+        rules: {
+            select1: {
+            required: true
+            },
+            select2: {
+            required: true
+            }
+            ,select3: {
+            required: true
+            }
+            ,select4: {
+            required: true
+            }
+            ,select5: {
+            required: true
+            }
+            ,select6: {
+            required: true
+            }
+            ,select7: {
+            required: true
+            }
+            ,select8: {
+            required: true
+            }
+            ,select9: {
+            required: true
+            }
+            ,select10: {
+            required: true
+            }
+          }
+      });  
+      
+      $('#surveyForm').validate(                                        // initialize jQuery Validate Plugin
+      {
+        invalidHandler: function(event, validator) {
+          var errors = validator.numberOfInvalids();
+          console.log(errors);
+          if (errors) {
+            var message;
+            if (errors === 1){
+              message = 'YOU FAILED TO ANSWER ONE QUESTION';
+            }
+            else if (errors > 1){
+              message = 'YOU FAILED TO ANSWER ' + errors + ' QUESTIONS';
+            }
+            $("div.errorMessage span").html(message).css("color", "red");
+            $("div.errorMessage").show();
+          } 
+          else {
+            $("div.errorMessage").hide();
+          }
+        },
+
+        submitHandler: function(form){
+          console.log("submitted");
+          //  collect values from FORM and push into Array/Object
+        }
+      });
+   });
+  
+  
 </script>
 <!-- Custom template scripts -->
 <script src="assets/js/magister.js"></script>
