@@ -7,6 +7,7 @@ var express = require('express');
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 3000;
+app.use(express.static(__dirname + '/app/public'));   // load static content like css and js
 
 // Sets up the Express app to handle data parsing
 // =============================================================
@@ -28,3 +29,5 @@ require('./app/routing/htmlRoutes.js')(app);
 app.listen(PORT, function(){
   console.log("Listening on port: " + PORT);
 });
+
+
