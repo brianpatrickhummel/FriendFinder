@@ -50,6 +50,22 @@
     <form id="surveyForm">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <div class="form-group">
+            <label id="inputNameLabel" for="exampleInputEmail1">FIRST & LAST NAME</label>
+            <input type="text" class="form-control text-center" id="inputName" placeholder="enter your first and last name">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+          <div class="form-group">
+            <label id="inputPhotoLabel" for="exampleInputEmail1">PHOTO</label>
+            <input type="url" class="form-control text-center" id="inputPhoto" placeholder="enter a URL link to a current photo of your ">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
           <h2 class="question"><b>Question 1</b></h2>
           <h3 class="answer">You prefer a quiet night at home to a night out on the town</h3>
           <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q1" name="select1">
@@ -222,76 +238,71 @@
 <script src="assets/js/chosen.jquery.js"></script>
 <script src="assets/js/jquery.validate.js"></script>
 <script>
-   $(document).ready(function(){
-      $(".chosen-select").chosen({ width: "210px", height: "204px"});   // initialize the jQuery Chosen Plugin
-      $.validator.setDefaults({                                         // set some defaults for jQuery Validate Plugin
-        ignore: ":hidden:not(.chosen-select), .chosen-search-input", 
-        debug: true,
-        success: "valid",
-        disable_search: true,
-        rules: {
-            select1: {
-            required: true
-            },
-            select2: {
-            required: true
-            }
-            ,select3: {
-            required: true
-            }
-            ,select4: {
-            required: true
-            }
-            ,select5: {
-            required: true
-            }
-            ,select6: {
-            required: true
-            }
-            ,select7: {
-            required: true
-            }
-            ,select8: {
-            required: true
-            }
-            ,select9: {
-            required: true
-            }
-            ,select10: {
-            required: true
-            }
+    $(".chosen-select").chosen({ width: "210px", height: "204px"});   // initialize the jQuery Chosen Plugin
+    $.validator.setDefaults({                                         // set some defaults for jQuery Validate Plugin
+      ignore: ":hidden:not(.chosen-select), .chosen-search-input", 
+      debug: true,
+      success: "valid",
+      disable_search: true,
+      rules: {
+          select1: {
+          required: true
+          },
+          select2: {
+          required: true
           }
-      });  
-      
-      $('#surveyForm').validate(                                        // initialize jQuery Validate Plugin
-      {
-        invalidHandler: function(event, validator) {
-          var errors = validator.numberOfInvalids();
-          console.log(errors);
-          if (errors) {
-            var message;
-            if (errors === 1){
-              message = 'YOU FAILED TO ANSWER ONE QUESTION';
-            }
-            else if (errors > 1){
-              message = 'YOU FAILED TO ANSWER ' + errors + ' QUESTIONS';
-            }
-            $("div.errorMessage span").html(message).css("color", "red");
-            $("div.errorMessage").show();
-          } 
-          else {
-            $("div.errorMessage").hide();
+          ,select3: {
+          required: true
           }
-        },
-
-        submitHandler: function(form){
-          console.log("submitted");
-          //  collect values from FORM and push into Array/Object
+          ,select4: {
+          required: true
+          }
+          ,select5: {
+          required: true
+          }
+          ,select6: {
+          required: true
+          }
+          ,select7: {
+          required: true
+          }
+          ,select8: {
+          required: true
+          }
+          ,select9: {
+          required: true
+          }
+          ,select10: {
+          required: true
+          }
         }
-      });
-   });
-  
-  
+    });  
+    $('#surveyForm').validate(                                        // initialize jQuery Validate Plugin
+    {
+      invalidHandler: function(event, validator) {
+        var errors = validator.numberOfInvalids();
+        console.log(errors);
+        if (errors) {
+          var message;
+          if (errors === 1){
+            message = 'YOU FAILED TO ANSWER ONE QUESTION';
+          }
+          else if (errors > 1){
+            message = 'YOU FAILED TO ANSWER ' + errors + ' QUESTIONS';
+          }
+          $("div.errorMessage span").html(message).css("color", "red");
+          $("div.errorMessage").show();
+        } 
+        else {
+          $("div.errorMessage").hide();
+        }
+      },
+
+      submitHandler: function(form){
+        console.log("submitted");
+        //  collect values from FORM and push into Array/Object
+      }
+    });
 </script>
 <!-- Custom template scripts -->
 <script src="assets/js/magister.js"></script>

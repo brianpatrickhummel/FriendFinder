@@ -435,6 +435,15 @@ span {
 	
 }
 
+#inputPhoto {
+	margin-bottom: 60px;
+}
+#inputNameLabel, #inputPhotoLabel {
+	font-family: "Wire One";
+	font-size: 2em;
+	letter-spacing: 1em;
+	text-indent: .5em;
+}
 
 @media (max-width: 767px){
 	.title { 
