@@ -352,6 +352,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	margin-top:0;
 	margin-bottom:0px; 
 	letter-spacing: .1em;
+	text-transform: uppercase;
 }
 
 .answer{
@@ -359,9 +360,10 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	font-size:2.6em;
 	line-height:0.8em;
 	font-weight: normal;
-	margin-top:5px;
+	margin-top:10px;
 	margin-bottom:10px;
 	letter-spacing: 0.08em;
+	text-transform: uppercase;
 }
 
 .optionText {
@@ -401,6 +403,9 @@ span {
 	letter-spacing: .5em;
 	font-weight: lighter;
 }
+
+
+
 
 @media (max-width: 992px){
 	.title { 
@@ -444,6 +449,15 @@ span {
 	font-size: 2em;
 	letter-spacing: 1em;
 	text-indent: .5em;
+	margin-bottom: 10px;
+	line-height: 1.2em;
+}
+
+hr.style12 {
+	height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+	border: 0;
+	margin-bottom: 50px
 }
 
 @media (max-width: 767px){
@@ -490,8 +504,16 @@ span {
 		font-size:2.0em;
 		line-height:1em;
 		font-weight: normal;
-		margin-top:5px;
 		margin-bottom:10px;
 		letter-spacing: 0.08em;
 	}
+
+	#inputNameLabel, #inputPhotoLabel {
+	font-family: "Wire One";
+	font-size: 1.5em;
+	letter-spacing: 1em;
+	text-indent: .5em;
+	margin-bottom: 10px;
+	line-height: 1.2em;
+}
 }
