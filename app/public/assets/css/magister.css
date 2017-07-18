@@ -435,9 +435,10 @@ span {
 	
 }
 
-#inputPhoto {
-	margin-bottom: 60px;
+.mainForm {
+	margin-top: 60px;
 }
+
 #inputNameLabel, #inputPhotoLabel {
 	font-family: "Wire One";
 	font-size: 2em;

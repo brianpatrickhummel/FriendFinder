@@ -52,7 +52,7 @@
         <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
           <div class="form-group">
             <label id="inputNameLabel" for="exampleInputEmail1">FIRST & LAST NAME</label>
-            <input type="text" class="form-control text-center" id="inputName" placeholder="enter your first and last name">
+            <input type="text" class="form-control text-center" id="inputName" placeholder="enter your first and last name" name="select11">
           </div>
         </div>
       </div>
@@ -60,11 +60,11 @@
         <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
           <div class="form-group">
             <label id="inputPhotoLabel" for="exampleInputEmail1">PHOTO</label>
-            <input type="url" class="form-control text-center" id="inputPhoto" placeholder="enter a URL link to a current photo of your ">
+            <input type="url" class="form-control text-center" id="inputPhoto" placeholder="enter a URL link to a current photo of your visage" name="select12">
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mainForm">
         <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
           <h2 class="question"><b>Question 1</b></h2>
           <h3 class="answer">You prefer a quiet night at home to a night out on the town</h3>
@@ -273,6 +273,12 @@
           required: true
           }
           ,select10: {
+          required: true
+          },
+          select11: {
+          required: true
+          },
+          select12: {
           required: true
           }
         }
