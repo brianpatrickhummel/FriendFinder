@@ -134,8 +134,10 @@ a { color:#fff; text-decoration: none; }
 a:hover, a:active { color:#fff; text-decoration: underline; }
 .lead { 
 	font-weight:normal;
-	font-size:1.5em;
+	font-size:1.4em;
 	line-height:1.2em;
+	letter-spacing: .4em;
+	margin-bottom: 35px;
 }
 
 .title,
@@ -147,7 +149,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	color:#FDF9F4; 
 	line-height:1em;
 	letter-spacing: .5em;
-	text-indent: .25em;
+	text-indent: .55em;
 }
 
 .subtitle { 
@@ -444,7 +446,7 @@ span {
 	
 }
 
-.mainForm {
+.firstQuestion {
 	margin-top: 60px;
 }
 
@@ -461,7 +463,40 @@ hr.style12 {
 	height: 6px;
 	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
 	border: 0;
-	margin-bottom: 50px
+	margin-bottom: 50px;
+}
+
+@font-face {
+    font-family: cass;
+    src: url(../fonts/cass.ttf);
+}
+
+@font-face {
+    font-family: Prisma;
+    src: url(../fonts/Prisma.otf);
+}
+
+@font-face {
+    font-family: Terrain;
+    src: url(../fonts/Terrain.otf);
+}
+
+p {
+	font-family: "cass";
+	font-size: 1em;
+	letter-spacing: .2em;
+	font-weight: lighter;
+}
+
+a.surveyStart {
+	font-family: "Prisma";
+	font-size: 1.1em;
+}
+
+h5 {
+	font-family: "Wire One";
+	letter-spacing: .5em;
+	font-size: 1.3em;
 }
 
 @media (max-width: 767px){

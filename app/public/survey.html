@@ -64,14 +64,10 @@
           </div>
         </div>
       </div>
-      
-      
       <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1">
         <hr class="style12">
       </div>
-      
-      
-      <div class="row mainForm">
+      <div class="row firstQuestion">
         <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
           <h2 class="question"><b>Question 1</b></h2>
           <h3 class="answer">You prefer a quiet night at home to a night out on the town</h3>
@@ -245,6 +241,10 @@
 <script src="assets/js/chosen.jquery.js"></script>
 <script src="assets/js/jquery.validate.js"></script>
 <script>
+  $('#inputPhoto').on("click", function(){
+    var addToURL = "http://";
+    document.getElementById('inputPhoto').value = 'http://';
+  });
     $(".chosen-select").chosen({ width: "210px", height: "204px"});   // initialize the jQuery Chosen Plugin
     $.validator.setDefaults({                                         // set some defaults for jQuery Validate Plugin
       ignore: ":hidden:not(.chosen-select), .chosen-search-input", 
