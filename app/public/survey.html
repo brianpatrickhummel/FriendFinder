@@ -8,7 +8,10 @@
 	<title>FriendFinder</title>
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	<!-- Bootstrap itself -->
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <!-- Vex Modals -->
+  <link rel="stylesheet" href="/assets/css/vex.css" />
+  <link rel="stylesheet" href="/assets/css/vex-theme-flat-attack.css" />
 	<!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/magister.css">
   <!-- Animate.css -->
@@ -236,6 +239,7 @@
 </section>
 
 <!-- Load js libs only when the page is loaded. -->
+<script src="/assets/js/vex.combined.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="assets/js/modernizr.custom.72241.js"></script>
@@ -295,8 +299,7 @@
         }
       }
   });  
-  $('#surveyForm').validate(                                        // initialize jQuery Validate Plugin
-  {
+  $('#surveyForm').validate({                                    // initialize jQuery Validate Plugi 
     invalidHandler: function(event, validator) {
       var errors = validator.numberOfInvalids();
       console.log(errors);
@@ -324,14 +327,22 @@
         var response = $('#q'+ i).val();
         scores.push(response);
       }
-      console.log(name);
-      console.log(photo);
-      console.log(scores);
+      // console.log(name);
+      // console.log(photo);
+      // console.log(scores);
       var newFriend = new Friend(name, photo, scores);
       console.log(newFriend);
+      vex.defaultOptions.className = 'vex-theme-flat-attack';
+      vex.dialog.confirm({
+        unsafeMessage: '<img src="http://kids.nationalgeographic.com/content/dam/kids/photos/articles/Other%20Explore%20Photos/R-Z/Wacky%20Weekend/Wild%20Cats/ww-wild-cats-tiger.adapt.945.1.jpg"></img>',
+        callback: function (value) {
+          console.log(value)
+        }
+      });
     }
   });
 
+  // Constructor for creating new Friend Object
   function Friend(name, photo, scores){
     this.name = name;
     this.photo = photo;
