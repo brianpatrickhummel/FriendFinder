@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
-	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+	<meta name="author"      content="Brian Hummel">
 	<title>FriendFinder</title>
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	<!-- Bootstrap itself -->
@@ -248,7 +248,7 @@
 <script>
 
   // dynamically add 'http://' to URL input field when field is active, therefore the original placeholder text can be displayed.  If a 'value='http://' was simpy add to the HTML markup for that <input> element, the placeholder attribute would be overridden by it.
-  $('.inputPhoto').on("focus", function(){
+  $('.inputPhoto').on("focus", function(){            // *** on focus !!! ***
     var addToURL = "http://";
     document.getElementById('q2').value = 'http://';  
   });
@@ -299,7 +299,7 @@
         }
       }
   });  
-  $('#surveyForm').validate({                                    // initialize jQuery Validate Plugi 
+  $('#surveyForm').validate({                                    // initialize jQuery Validate Plugin
     invalidHandler: function(event, validator) {
       var errors = validator.numberOfInvalids();
       console.log(errors);
@@ -324,29 +324,44 @@
       var photo = $('#q2').val().trim();
       var scores = [];
       for (var i = 3; i < 13; i++){
-        var response = $('#q'+ i).val();
-        scores.push(response);
+        var scoreNumber = parseInt($('#q'+ i).val());
+        scores.push(scoreNumber);
       }
-      // console.log(name);
-      // console.log(photo);
-      // console.log(scores);
-      var newFriend = new Friend(name, photo, scores);
-      console.log(newFriend);
-      vex.defaultOptions.className = 'vex-theme-flat-attack';
-      vex.dialog.confirm({
-        unsafeMessage: '<img src="http://kids.nationalgeographic.com/content/dam/kids/photos/articles/Other%20Explore%20Photos/R-Z/Wacky%20Weekend/Wild%20Cats/ww-wild-cats-tiger.adapt.945.1.jpg"></img>',
-        callback: function (value) {
-          console.log(value)
-        }
+      for (var i = 0;i < scores.length; i++){
+          var scoreSum = scores.reduce((a, b) => a + b);
+          console.log(scoreSum);
+      }
+    
+      var newFriend = new Friend(name, photo, scores, scoreSum);
+      // console.log(newFriend);
+      var currentURL = window.location.origin;
+      $.post(currentURL + '/api/friends', newFriend)
+      .done(function(data){
+        console.log(data);
+        
+        
+
+
+      //   vex.defaultOptions.className = 'vex-theme-flat-attack';
+      // vex.dialog.confirm({
+      //   unsafeMessage: '<img id="friendImage" width="375" src="http://kids.nationalgeographic.com/content/dam/kids/photos/articles/Other%20Explore%20Photos/R-Z/Wacky%20Weekend/Wild%20Cats/ww-wild-cats-tiger.adapt.945.1.jpg"></img>',
+      //   callback: function (value) {
+      //     console.log(value);
+          
+      //   }
+      // });
+
       });
+
     }
   });
 
   // Constructor for creating new Friend Object
-  function Friend(name, photo, scores){
+  function Friend(name, photo, scores, scoreSum){
     this.name = name;
     this.photo = photo;
     this.scores = scores;
+    this.scoreSum = scoreSum
   }
 </script>
 <!-- Custom template scripts -->

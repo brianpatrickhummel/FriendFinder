@@ -345,6 +345,11 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	color: inherit;
 }
 
+
+/***********************************************************/
+/*                   My Additions                       */
+/***********************************************************/
+
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
     color: #262626;
     text-decoration: none;
@@ -394,8 +399,8 @@ span {
 }
 
 .chosen-container-single, .chosen-single {
-    background-color: black !important;
-		background:black !important;     
+	background-color: black !important;
+	background:black !important;     
 }
 
 .error {
@@ -404,14 +409,70 @@ span {
 
 .errorMessage {
 	color: red;
-	 font-size: 1.5em;
+	font-size: 1.5em;
 	margin-top: 25px; 
 	letter-spacing: .5em;
 	font-weight: lighter;
 }
 
 
+.firstQuestion {
+	margin-top: 60px;
+}
 
+#inputNameLabel, #inputPhotoLabel {
+	font-family: "Wire One";
+	font-size: 2em;
+	letter-spacing: 1em;
+	text-indent: .5em;
+	margin-bottom: 10px;
+	line-height: 1.2em;
+}
+
+hr.style12 {
+	height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+	border: 0;
+	margin-bottom: 50px;
+}
+
+@font-face {
+	font-family: cass;
+	src: url(../fonts/cass.ttf);
+}
+
+@font-face {
+	font-family: Prisma;
+	src: url(../fonts/Prisma.otf);
+}
+
+@font-face {
+	font-family: Terrain;
+	src: url(../fonts/Terrain.otf);
+}
+
+p {
+	font-family: "cass";
+	font-size: 1em;
+	letter-spacing: .2em;
+	font-weight: lighter;
+}
+
+a.surveyStart {
+	font-family: "Prisma";
+	font-size: 1.1em;
+}
+
+h5 {
+	font-family: "Wire One";
+	letter-spacing: .5em;
+	font-size: 1.3em;
+}
+
+
+/***********************************************************/
+/*                   My Media Queries                       */
+/***********************************************************/
 
 @media (max-width: 992px){
 	.title { 
@@ -443,61 +504,12 @@ span {
 		text-indent: .05em;
 	}
 
+	#friendImage {
+		width: 300px;
+	}
+
+}
 	
-}
-
-.firstQuestion {
-	margin-top: 60px;
-}
-
-#inputNameLabel, #inputPhotoLabel {
-	font-family: "Wire One";
-	font-size: 2em;
-	letter-spacing: 1em;
-	text-indent: .5em;
-	margin-bottom: 10px;
-	line-height: 1.2em;
-}
-
-hr.style12 {
-	height: 6px;
-	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
-	border: 0;
-	margin-bottom: 50px;
-}
-
-@font-face {
-    font-family: cass;
-    src: url(../fonts/cass.ttf);
-}
-
-@font-face {
-    font-family: Prisma;
-    src: url(../fonts/Prisma.otf);
-}
-
-@font-face {
-    font-family: Terrain;
-    src: url(../fonts/Terrain.otf);
-}
-
-p {
-	font-family: "cass";
-	font-size: 1em;
-	letter-spacing: .2em;
-	font-weight: lighter;
-}
-
-a.surveyStart {
-	font-family: "Prisma";
-	font-size: 1.1em;
-}
-
-h5 {
-	font-family: "Wire One";
-	letter-spacing: .5em;
-	font-size: 1.3em;
-}
 
 @media (max-width: 767px){
 	.title { 
@@ -517,7 +529,6 @@ h5 {
 		margin-top:0;
 		margin-bottom:30px; 
 		letter-spacing: .1em;
-	
 	}
 
 	.tagline { 
@@ -530,12 +541,12 @@ h5 {
 	}
 
 	.question {
-	font-family: "Wire One";
-	line-height:1em;
-	font-size: 2.5em;
-	margin-top:0;
-	margin-bottom:0px; 
-	letter-spacing: .1em;
+		font-family: "Wire One";
+		line-height:1em;
+		font-size: 2.5em;
+		margin-top:0;
+		margin-bottom:0px; 
+		letter-spacing: .1em;
 	}
 
 	.answer {
@@ -548,11 +559,16 @@ h5 {
 	}
 
 	#inputNameLabel, #inputPhotoLabel {
-	font-family: "Wire One";
-	font-size: 1.5em;
-	letter-spacing: 1em;
-	text-indent: .5em;
-	margin-bottom: 10px;
-	line-height: 1.2em;
-}
+		font-family: "Wire One";
+		font-size: 1.5em;
+		letter-spacing: 1em;
+		text-indent: .5em;
+		margin-bottom: 10px;
+		line-height: 1.2em;
+	}
+
+	#friendImage {
+		width: 235px;
+	}
+
 }

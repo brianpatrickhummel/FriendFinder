@@ -7,7 +7,7 @@ var express = require('express');
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 3000;
-app.use(express.static(__dirname + '/app/public'));   // load static content like css and js
+app.use(express.static(__dirname + '/app/public'));    // serve static content (css/js) on all routes
 
 // Sets up the Express app to handle data parsing
 // =============================================================
@@ -20,6 +20,10 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 // =============================================================
 require('./app/routing/apiRoutes.js')(app);  
 require('./app/routing/htmlRoutes.js')(app);
+ app.use(function(req, res){
+   
+    res.sendFile(path.join(__dirname + '/app/public/home.html'));
+  });
 
 
 
