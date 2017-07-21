@@ -264,29 +264,29 @@
         },
         select2: {
         required: true
-        }
-        ,select3: {
+        },
+        select3: {
         required: true
-        }
-        ,select4: {
+        },
+        select4: {
         required: true
-        }
-        ,select5: {
+        },
+        select5: {
         required: true
-        }
-        ,select6: {
+        },
+        select6: {
         required: true
-        }
-        ,select7: {
+        },
+        select7: {
         required: true
-        }
-        ,select8: {
+        },
+        select8: {
         required: true
-        }
-        ,select9: {
+        },
+        select9: {
         required: true
-        }
-        ,select10: {
+        },
+        select10: {
         required: true
         },
         select11: {
@@ -297,8 +297,9 @@
         }
       }
   }); 
-  // initialize jQuery Validate Plugin
-  $('#surveyForm').validate({                                   
+  // Initialize jQuery Validate Plugin to evaluate Form inputs
+  $('#surveyForm').validate({  
+    // If errors are found they are presented on the screen, Form does not submit                                 
     invalidHandler: function(event, validator) {
       var errors = validator.numberOfInvalids();
       console.log(errors);
@@ -319,6 +320,7 @@
     },
     // When Form has been fully validated.....
     submitHandler: function(form){
+      // Gather name and photo URL from Form
       var name = $('#q1').val().trim();
       var photo = $('#q2').val().trim();
       var scores = [];
@@ -327,34 +329,38 @@
         var scoreNumber = parseInt($('#q'+ i).val());
         scores.push(scoreNumber);
       }
-      
       // Utilize contructor to create new Friend object
       var newFriend = new Friend(name, photo, scores);
       // console.log(newFriend);
       var currentURL = window.location.origin;
       // send the new Friend Object via POST request to server
       $.post(currentURL + '/api/friends', newFriend)
+      // returns the array of friend objects as the "data" variable
       .done(function(data){
-        console.log(data);
+        // Array to store the difference in scores between the user and each friend in the friend's array
         var differencesTotal = [];
-        for (var i = 0; i < data.length-1; i++){   //loop through all friends excluding the last object (this user)
+        // loop through all friends excluding the last object, which is the current user
+        for (var i = 0; i < data.length-1; i++){   
+          // Array to store the differences per question response between current user and current friend
           var differences = [];
           for (var j = 0; j < data[i].scores.length; j++) {
+            // Math.abs returns the result as an absolute number, no negatives
             var indexDiff = Math.abs(scores[j] - data[i].scores[j]);
             differences.push(indexDiff);
-            console.log(differences);
           }
+          // Sums all of the score differences with current friend and pushes to differencesTotal array
           var differenceSum = differences.reduce((a, b) => a + b);
-          console.log(differenceSum);
           differencesTotal.push(differenceSum);
-          console.log(differencesTotal);
         }
+        // All friend scores have been compared to current user, summed and added to differencesTotal array
+        // Find the lowest number in the differencesTotal array which results in the Friend match
         var lowest = 0;
         for (var k = 1; k < differencesTotal.length; k++) {
           if (differencesTotal[k] < differencesTotal[lowest]) lowest = k;
         }
+        // friend match identified
         var bestFriend = data[lowest];
-        console.log(bestFriend);
+        // Present results using the Vex Dialog Library (pop-up window)
         vex.defaultOptions.className = 'vex-theme-flat-attack';
         vex.dialog.alert({
           unsafeMessage: '<h1 class="text-center" id="newFriendMeet" >MEET YOUR NEW FRIEND</h1><h2 class="text-center newFriendName">' + bestFriend.name + '</h2><img class="text-center" id="friendImage" width="375" src="' + bestFriend.photo + '"></img>'
