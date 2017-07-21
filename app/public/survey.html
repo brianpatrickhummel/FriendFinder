@@ -38,7 +38,7 @@
 </nav>
 
 <!-- Main (Home) section -->
-<section class="section" id="head">
+<section class="section surveyForm animated fadeIn" id="head">
 	<div class="container">
 
 		<div class="row">
@@ -299,7 +299,7 @@
   }); 
   // Initialize jQuery Validate Plugin to evaluate Form inputs
   $('#surveyForm').validate({  
-    // If errors are found they are presented on the screen, Form does not submit                                 
+    // If form requirements aren't met errors display on screen, Form will not submit until corrected                        
     invalidHandler: function(event, validator) {
       var errors = validator.numberOfInvalids();
       console.log(errors);
@@ -311,6 +311,7 @@
         else if (errors > 1){
           message = 'YOU FAILED TO ANSWER ' + errors + ' QUESTIONS';
         }
+        // There is a placeholder div in HTML with class="errorMessage"
         $("div.errorMessage span").html(message).css("color", "red");
         $("div.errorMessage").show();
       } 
@@ -331,7 +332,6 @@
       }
       // Utilize contructor to create new Friend object
       var newFriend = new Friend(name, photo, scores);
-      // console.log(newFriend);
       var currentURL = window.location.origin;
       // send the new Friend Object via POST request to server
       $.post(currentURL + '/api/friends', newFriend)
@@ -365,11 +365,15 @@
         vex.dialog.alert({
           unsafeMessage: '<h1 class="text-center" id="newFriendMeet" >MEET YOUR NEW FRIEND</h1><h2 class="text-center newFriendName">' + bestFriend.name + '</h2><img class="text-center" id="friendImage" width="375" src="' + bestFriend.photo + '"></img>'
         });
-        $(document).on("click", function(){
-          $.get('');
-        });
-      });
+        // =========================== ? ? ? ? ===========================================
+        // $.get(currentURL + '/'); ????????  Why does this not load the homepage
+        // =========================== ? ? ? ? ===========================================
 
+        // When screen is clicked, homepage will load after 1 second
+        $(document).on("click", function(){
+          window.setTimeout(function(){ window.location = currentURL; },1000);
+        });  
+      });
     }
   });
 
