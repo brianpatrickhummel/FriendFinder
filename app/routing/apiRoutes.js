@@ -1,5 +1,5 @@
 // Routing for API data requests
-var path = require('path');
+
 // Required files for data queries
 var friendsArray  = require('../../data/friends.js');
 
@@ -9,9 +9,15 @@ module.exports = function (app) {
     res.json(friendsArray);
   });
 
-  // app.get('/api/?', function(req, res){
-  //   res.sendFile(path.resolve('/app/routing/error.html'));
+// ==================== Load Error Page =========================
+  // when an erroneous url of api/? is entered, display this page
+  // can't get this page to serve
+
+  // app.get('/api/?', function(req, res){    
+  //     res.sendFile(path.resolve('app/public/error.html'));
   // });
+
+// ==============================================================
 
   // Add incoming survey results and update compatibility data
   app.post('/api/friends', function(req, res){

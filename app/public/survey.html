@@ -36,17 +36,14 @@
 		</div>
 	</div>
 </nav>
-
 <!-- Main (Home) section -->
 <section class="section surveyForm animated fadeIn" id="head">
 	<div class="container">
-
 		<div class="row">
 			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
 				<h2 class="subtitle" id="surveyTitle" style="letter-spacing: .3em; font-size: 5em">SURVEY</h2>
 				<h3 class="tagline"></h3>
-      </div> <!-- /col -->
-      
+      </div> <!-- /col --> 
     <!-- SURVEY FORM - 10 QUESTIONS -->
     <form id="surveyForm">
       <div class="row">
@@ -235,7 +232,6 @@
     </form>
 	</div>
 </section>
-
 <!-- Load js libs only when the page is loaded. -->
 <script src="/assets/js/vex.combined.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -243,8 +239,9 @@
 <script src="assets/js/modernizr.custom.72241.js"></script>
 <script src="assets/js/chosen.jquery.js"></script>
 <script src="assets/js/jquery.validate.js"></script>
-<script>
 
+ <!-- ===================================== Main Client-side JS ===================================== -->
+<script>
   // dynamically add 'http://' to URL input field when field is active, therefore the original placeholder text can be displayed.  If a 'value='http://' was simpy add to the HTML markup for that <input> element, the placeholder attribute would be overridden by it.
   $('.inputPhoto').on("focus", function(){            // *** on focus !!! ***
     var addToURL = "http://";
@@ -252,7 +249,7 @@
   });
   // initialize the jQuery Chosen Plugin
   $(".chosen-select").chosen({ width: "210px", height: "204px", disable_search_threshold: 10});   
-  // set some defaults for jQuery Validate Plugin
+  // set some defaults for jQuery Validate Plugin - make all input fields required
   $.validator.setDefaults({                    
     ignore: ":hidden:not(.chosen-select), .chosen-search-input", 
     debug: true,
@@ -366,7 +363,7 @@
           unsafeMessage: '<h1 class="text-center" id="newFriendMeet" >MEET YOUR NEW FRIEND</h1><h2 class="text-center newFriendName">' + bestFriend.name + '</h2><img class="text-center" id="friendImage" width="375" src="' + bestFriend.photo + '"></img>'
         });
         // =========================== ? ? ? ? ===========================================
-        // $.get(currentURL + '/'); ????????  Why does this not load the homepage
+        // $.get(currentURL + '/');      ---Why does this not load the homepage---
         // =========================== ? ? ? ? ===========================================
 
         // When screen is clicked, homepage will load after 1 second
@@ -383,6 +380,7 @@
     this.photo = photo;
     this.scores = scores;
   }
+
 </script>
 <!-- Custom template scripts -->
 <script src="assets/js/magister.js"></script>

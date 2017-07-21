@@ -20,13 +20,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 // =============================================================
 require('./app/routing/apiRoutes.js')(app);  
 require('./app/routing/htmlRoutes.js')(app);
- app.use(function(req, res){
-   
-    res.sendFile(path.join(__dirname + '/app/public/home.html'));
-  });
-
-
-
+ 
 
 // Starts the server to begin listening
 // =============================================================
