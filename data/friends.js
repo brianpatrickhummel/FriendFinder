@@ -14,8 +14,23 @@ var friendsArray = [
       "8",
       "9",
       "10"
-    ],
-    "scoreSum": "181"
+    ]
+  },
+  {
+    "name": "Alyssa Lytle",
+    "photo": "http://www.wildliferemovalservicesofflorida.com/wp-content/uploads/2016/10/How-To-Get-Rid-Of-Rats.jpg",
+    "scores": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
   }
 ];
 

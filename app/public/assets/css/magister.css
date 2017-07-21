@@ -469,6 +469,18 @@ h5 {
 	font-size: 1.3em;
 }
 
+#newFriendMeet{
+		font-family: "Wire One";
+    font-size: 3.3em;
+		letter-spacing: .1em;
+		line-height: 1.5em;
+	}
+
+.newFriendName{
+	font-family: "Wire One";
+	font-size: 2.5em;
+	letter-spacing: .08em;
+}
 
 /***********************************************************/
 /*                   My Media Queries                       */
@@ -506,6 +518,20 @@ h5 {
 
 	#friendImage {
 		width: 300px;
+	}
+
+	#newFriendMeet{
+		font-family: "Wire One";
+    font-size: 3.3em;
+		letter-spacing: .1em;
+		line-height: 1.5em;
+	}
+
+
+	.newFriendName{
+		font-family: "Wire One";
+    font-size: 2.5em;
+    letter-spacing: .08em;
 	}
 
 }
@@ -571,4 +597,15 @@ h5 {
 		width: 235px;
 	}
 
+	#newFriendMeet{
+		font-family: "Wire One";
+		font-size: 2.2em;
+		letter-spacing: .05em;
+	}
+
+	.newFriendName{
+		font-family: "Wire One";
+		font-size: 1.5em;
+		letter-spacing: .01em;
+	}
 }

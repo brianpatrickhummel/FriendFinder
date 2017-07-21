@@ -24,8 +24,6 @@
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 </head>
-
-<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
 <body class="theme-invert" style="background:black url(../images/body6.jpg)">
 <nav class="mainmenu" style="background-color: black">
 	<div class="container">
@@ -252,10 +250,10 @@
     var addToURL = "http://";
     document.getElementById('q2').value = 'http://';  
   });
-
-  // FORM Configuration and Validation
-  $(".chosen-select").chosen({ width: "210px", height: "204px", disable_search_threshold: 10});   // initialize the jQuery Chosen Plugin
-  $.validator.setDefaults({                                         // set some defaults for jQuery Validate Plugin
+  // initialize the jQuery Chosen Plugin
+  $(".chosen-select").chosen({ width: "210px", height: "204px", disable_search_threshold: 10});   
+  // set some defaults for jQuery Validate Plugin
+  $.validator.setDefaults({                    
     ignore: ":hidden:not(.chosen-select), .chosen-search-input", 
     debug: true,
     success: "valid",
@@ -298,8 +296,9 @@
         required: true
         }
       }
-  });  
-  $('#surveyForm').validate({                                    // initialize jQuery Validate Plugin
+  }); 
+  // initialize jQuery Validate Plugin
+  $('#surveyForm').validate({                                   
     invalidHandler: function(event, validator) {
       var errors = validator.numberOfInvalids();
       console.log(errors);
@@ -323,45 +322,56 @@
       var name = $('#q1').val().trim();
       var photo = $('#q2').val().trim();
       var scores = [];
+      // Gather responses (scores) from the 10 survey questions
       for (var i = 3; i < 13; i++){
         var scoreNumber = parseInt($('#q'+ i).val());
         scores.push(scoreNumber);
       }
-      for (var i = 0;i < scores.length; i++){
-          var scoreSum = scores.reduce((a, b) => a + b);
-          console.log(scoreSum);
-      }
-    
-      var newFriend = new Friend(name, photo, scores, scoreSum);
+      
+      // Utilize contructor to create new Friend object
+      var newFriend = new Friend(name, photo, scores);
       // console.log(newFriend);
       var currentURL = window.location.origin;
+      // send the new Friend Object via POST request to server
       $.post(currentURL + '/api/friends', newFriend)
       .done(function(data){
         console.log(data);
-        
-        
-
-
-      //   vex.defaultOptions.className = 'vex-theme-flat-attack';
-      // vex.dialog.confirm({
-      //   unsafeMessage: '<img id="friendImage" width="375" src="http://kids.nationalgeographic.com/content/dam/kids/photos/articles/Other%20Explore%20Photos/R-Z/Wacky%20Weekend/Wild%20Cats/ww-wild-cats-tiger.adapt.945.1.jpg"></img>',
-      //   callback: function (value) {
-      //     console.log(value);
-          
-      //   }
-      // });
-
+        var differencesTotal = [];
+        for (var i = 0; i < data.length-1; i++){   //loop through all friends excluding the last object (this user)
+          var differences = [];
+          for (var j = 0; j < data[i].scores.length; j++) {
+            var indexDiff = Math.abs(scores[j] - data[i].scores[j]);
+            differences.push(indexDiff);
+            console.log(differences);
+          }
+          var differenceSum = differences.reduce((a, b) => a + b);
+          console.log(differenceSum);
+          differencesTotal.push(differenceSum);
+          console.log(differencesTotal);
+        }
+        var lowest = 0;
+        for (var k = 1; k < differencesTotal.length; k++) {
+          if (differencesTotal[k] < differencesTotal[lowest]) lowest = k;
+        }
+        var bestFriend = data[lowest];
+        console.log(bestFriend);
+        vex.defaultOptions.className = 'vex-theme-flat-attack';
+        vex.dialog.alert({
+          unsafeMessage: '<h1 class="text-center" id="newFriendMeet" >MEET YOUR NEW FRIEND</h1><h2 class="text-center newFriendName">' + bestFriend.name + '</h2><img class="text-center" id="friendImage" width="375" src="' + bestFriend.photo + '"></img>'
+        });
+        $(document).on("click", function(){
+          $.get('');
+        });
       });
 
     }
   });
 
   // Constructor for creating new Friend Object
-  function Friend(name, photo, scores, scoreSum){
+  function Friend(name, photo, scores){
     this.name = name;
     this.photo = photo;
     this.scores = scores;
-    this.scoreSum = scoreSum
   }
 </script>
 <!-- Custom template scripts -->
