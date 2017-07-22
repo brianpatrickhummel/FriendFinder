@@ -19,15 +19,8 @@ module.exports = function (app) {
 
 // ==============================================================
 
-
-
-
-  app.get('/api/?', function(req, res){    
-    res.sendFile(path.resolve('app/public/error.html'));
-});
-
   // Sends home.html as default response when /survey isn't requested
   app.use(function(req, res){
-    res.sendFile(path.join(__dirname + '/../public/home.html'));
+    res.sendFile(path.join(__dirname + '/../public/index.html'));
   });
 };

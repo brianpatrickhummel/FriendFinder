@@ -6,19 +6,22 @@
 	<meta name="description" content="">
 	<title>FriendFinder</title>
   <!-- Vex Modals -->
-  <link rel="stylesheet" href="../app/public/assets/css/vex.css" />
-  <link rel="stylesheet" href="../app/public/assets/css/vex-theme-flat-attack.css" />
+  <link rel="stylesheet" href="/assets/css/vex.css" />
+  <link rel="stylesheet" href="/assets/css/vex-theme-flat-attack.css" />
 </head>
 
 <body style="background: black">
-  <script src="../app/public/assets/js/vex.combined.min.js"></script>
+  <h1>this is the error page</h1>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/assets/js/vex.combined.min.js"></script>
    <script>
     vex.defaultOptions.className = 'vex-theme-flat-attack';
       vex.dialog.alert({
         unsafeMessage: '<h1 class="text-center">Invalid URL.</h1><h2 class="text-center">Please enter a valid URL.</h2>'
       });
     $(document).on("click", function(){
-          window.setTimeout(function(){ window.location = window.locatin.origin; },1000);
+          window.setTimeout(function(){ window.location = window.location.origin; },1000);
         }); 
-  </script>   
+</script> 
+  
 </body>

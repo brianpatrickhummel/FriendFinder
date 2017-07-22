@@ -13,9 +13,9 @@ module.exports = function (app) {
   // when an erroneous url of api/? is entered, display this page
   // can't get this page to serve
 
-  // app.get('/api/?', function(req, res){    
-  //     res.sendFile(path.resolve('app/public/error.html'));
-  // });
+  app.get('/api/?', function(req, res){    
+      res.sendFile('/../public/error.html');
+  });
 
 // ==============================================================
 
