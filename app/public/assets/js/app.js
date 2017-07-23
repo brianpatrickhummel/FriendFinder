@@ -116,15 +116,17 @@
         // Present results using the Vex Dialog Library (pop-up window)
         vex.defaultOptions.className = 'vex-theme-flat-attack';
         vex.dialog.alert({
-          unsafeMessage: '<h1 class="text-center" id="newFriendMeet" >MEET YOUR NEW FRIEND</h1><h2 class="text-center newFriendName">' + bestFriend.name + '</h2><img class="text-center" id="friendImage" width="375" src="' + bestFriend.photo + '"></img>'
+          unsafeMessage: '<h1 class="text-center" id="newFriendMeet" >MEET YOUR NEW FRIEND</h1><h2 class="text-center newFriendName">' + bestFriend.name + '</h2><img class="col-xs-8 col-xs-offset-2" id="friendImage" width="375" src="' + bestFriend.photo + '"></img>'
         });
+        $('.vex-dialog-message').addClass("clearfix").css("overflow", "scroll");  // keeps Vex Dialog OK button from floating to right of image
+
         // =========================== ? ? ? ? ===========================================
         // $.get(currentURL + '/');      ---Why does this not load the homepage---
         // =========================== ? ? ? ? ===========================================
 
         // When screen is clicked, homepage will load after 1 second
         $(document).on("click", function(){
-          window.setTimeout(function(){ window.location = currentURL; },1000);
+          window.setTimeout(function(){ window.location = currentURL; }, 400);
         });  
       });
     }

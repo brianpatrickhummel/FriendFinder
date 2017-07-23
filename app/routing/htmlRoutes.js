@@ -9,17 +9,7 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname + '/../public/survey.html'));
   });
 
-// ==================== Load Error Page =========================
-  // when an erroneous url of api/? is entered, display this page
-  // can't get this page to serve
-
-  // app.get('/api/?', function(req, res){    
-  //     res.sendFile(path.resolve('app/public/error.html'));
-  // }); 
-
-// ==============================================================
-
-  // Sends home.html as default response when /survey isn't requested
+  // Sends home.html as default response when /survey or /api/friends isn't requested
   app.use(function(req, res){
     res.sendFile(path.join(__dirname + '/../public/index.html'));
   });
