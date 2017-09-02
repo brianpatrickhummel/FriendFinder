@@ -2,11 +2,9 @@
 
 A responsive, full-stack Friend Finder application which allows users to complete a survey, answering 10 questions about their personality.  The app then adds the new user and his/her survey results to an array of 'Friends' objects and compares the results against all of the other potential friends in the array.  The most compatible match is determined and the name and photo of the Friend match is displayed on the page.
 
-Front-end design is a combintation of the following:  The Bootstrap Framework, Magister HTML5 template, Chosen jQuery plugin for construction of the survey, Validate jQuery plugin for survey form validation, Vex JS Library for Modal Dialog Boxes, Handlebars templating, animations via Animate.css and icons by FontAwesome.
+Front-end design is a combination of the following:  The Bootstrap Framework, Magister HTML5 template, Chosen jQuery plugin for construction of the survey, Validate jQuery plugin for survey form validation, Vex JS Library for Modal Dialog Boxes, Handlebars templates, animations via Animate.css and icons by FontAwesome.
 
 Back-end is Node.js using the Express framework to serve as a basic API to handle AJAX requests, querying against an array of 'Friends' objects. Manual API/HTML routing.
-
-FIRST USE OF EXPRESS FRAMEWORK and HANDLEBARS TEMPLATING
 
 
 
