@@ -479,6 +479,13 @@ h5 {
 	animation-delay: .25s; 
 }
 
+.fa:hover {
+	-webkit-animation: fadeIn ;
+	animation: fadeIn ;
+	animation-duration: .5s;
+	color: rgba(0,0,0,0.5);
+}
+
 /***********************************************************/
 /*                   My Media Queries                       */
 /***********************************************************/
