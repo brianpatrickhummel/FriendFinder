@@ -479,7 +479,7 @@ h5 {
 	animation-delay: .25s; 
 }
 
-.fa:hover {
+.hovFade:hover {
 	-webkit-animation: fadeIn ;
 	animation: fadeIn ;
 	animation-duration: .5s;
