@@ -92,7 +92,7 @@ $("#surveyForm").validate({
       var scoreNumber = parseInt($("#q" + i).val());
       scores.push(scoreNumber);
     }
-    // Utilize contructor to create new Friend object
+    // Utilize constructor to create new Friend object
     var newFriend = new Friend(name, photo, scores);
     var currentURL = window.location.origin;
     // send the new Friend Object via POST request to server
@@ -135,10 +135,6 @@ $("#surveyForm").validate({
         $(".vex-dialog-message")
           .addClass("clearfix")
           .css("overflow", "scroll"); // keeps Vex Dialog OK button from floating to right of image
-
-        // =========================== ? ? ? ? ===========================================
-        // $.get(currentURL + '/');      ---Why does this not load the homepage---
-        // =========================== ? ? ? ? ===========================================
 
         // When screen is clicked, homepage will load after 1 second
         $(document).on("click", function() {

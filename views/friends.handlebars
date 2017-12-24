@@ -1,16 +1,10 @@
- 
- <div>
+<div>
   <h1 id="header1" style="color:white;text-align:center; font-size: 4.6em; letter-spacing: .5em; text-indent: .45em;">POTENTIAL FRIENDS</h1>
+  <br> {{#each objects}}
+  <p>
+    <p style="color: white;text-align:center; font-size: 2.7em;">{{this.name}}</p>
+    <img src="{{{this.photo}}}" style="max-width:375px;text-align:center;display: block;margin: 0 auto;"></img>
+  </p>
   <br>
-  {{#each objects}}
-    <p>
-        <p style="color: white;text-align:center; font-size: 2.7em;">{{this.name}}</p>
-        <img src="{{{this.photo}}}" style="max-width:375px;text-align:center;display: block;margin: 0 auto;"></img>
-    </p>
-    <br>
-    <br>
-  {{/each}}
+  <br> {{/each}}
 </div>
-
-
-

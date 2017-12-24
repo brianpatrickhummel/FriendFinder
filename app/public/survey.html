@@ -1,249 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author"      content="Brian Hummel">
-	<title>FriendFinder</title>
-	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
-	<!-- Bootstrap itself -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Brian Hummel">
+  <title>FriendFinder</title>
+  <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+  <!-- Bootstrap itself -->
   <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <!-- Vex Modals -->
   <link rel="stylesheet" href="/assets/css/vex.css" />
   <link rel="stylesheet" href="/assets/css/vex-theme-flat-attack.css" />
-	<!-- Custom styles -->
+  <!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/magister.css">
   <!-- Animate.css -->
-  <link rel="stylesheet" href="assets/css/animate.css"> 
+  <link rel="stylesheet" href="assets/css/animate.css">
   <!-- Chosen.css -->
-  <link rel="stylesheet" href="assets/css/chosen.css"> 
+  <link rel="stylesheet" href="assets/css/chosen.css">
   <!-- Font Awesome CDN-->
   <script src="https://use.fontawesome.com/c38831e163.js"></script>
-	<!-- Fonts -->
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+  <!-- Fonts -->
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 </head>
-<body class="theme-invert" style="background:black url(../images/body6.jpg)">
-<nav class="mainmenu" style="background-color: black">
-	<div class="container">
-		<div class="dropdown">
-			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
-			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<li><a class="dropIgnore" href="/">Home</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-<!-- Main (Home) section -->
-<section class="section surveyForm animated fadeIn" id="head">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
-				<h2 class="subtitle" id="surveyTitle" style="letter-spacing: .3em; font-size: 5em">SURVEY</h2>
-				<h3 class="tagline"></h3>
-      </div> <!-- /col --> 
-    <!-- SURVEY FORM - 10 QUESTIONS -->
-    <form id="surveyForm">
-      <div class="row">
-        <div class="col-xs-10 col-sm-8 col-md-8 col-md-offset-2 col-lg-8 col-xs-offset-1 col-sm-offset-2 text-center questions">
-          <div class="form-group">
-            <label id="inputNameLabel" for="exampleInputEmail1">FIRST & LAST NAME</label>
-            <input type="text" class="form-control text-center" id="q1" placeholder="enter your first and last name" name="select11">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-10 col-sm-8 col-md-8 col-md-offset-2 col-lg-8 col-xs-offset-1  col-sm-offset-2 text-center questions">
-          <div class="form-group">
-            <label id="inputPhotoLabel" for="exampleInputEmail1">PHOTO</label>
-            <input type="url" class="form-control text-center inputPhoto" id="q2" placeholder="enter a URL that links to a current photo of your visage" name="select12">
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1">
-        <hr class="style12">
-      </div>
-      <div class="row firstQuestion">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
-          <h2 class="question"><b>Question 1</b></h2>
-          <h3 class="answer">You prefer a quiet night at home to a night out on the town</h3>
-          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q3" name="select1">
-            <option value="" class="optionText"></option>
-            <option value="1" class="optionText">1 (Strongly Disagree)</option>
-            <option value="2" class="optionText">2</option>
-            <option value="3" class="optionText">3</option>
-            <option value="4" class="optionText">4</option>
-            <option value="5" class="optionText">5 (Strongly Agree)</option>
-          </select>
-        </div> 
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
-          <h2 class="question"><b>Question 2</b></h2>
-          <h3 class="answer">Loud people are vexatious to the spirit</h3>
-          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q4" name="select2">
-            <option value="" class="optionText"></option>
-            <option value="1" class="optionText">1 (Strongly Disagree)</option>
-            <option value="2" class="optionText">2</option>
-            <option value="3" class="optionText">3</option>
-            <option value="4" class="optionText">4</option>
-            <option value="5" class="optionText">5 (Strongly Agree)</option>
-          </select>
-        </div> 
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
-          <h2 class="question"><b>Question 3</b></h2>
-          <h3 class="answer">You rarely do something just out of sheer curiosity.</h3>
-          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q5" name="select3">
-            <option value="" class="optionText"></option>
-            <option value="1" class="optionText">1 (Strongly Disagree)</option>
-            <option value="2" class="optionText">2</option>
-            <option value="3" class="optionText">3</option>
-            <option value="4" class="optionText">4</option>
-            <option value="5" class="optionText">5 (Strongly Agree)</option>
-          </select>
-        </div> 
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
-          <h2 class="question"><b>Question 4</b></h2>
-          <h3 class="answer">People can rarely upset you.</h3>
-          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q6" name="select4">
-            <option value="" class="optionText"></option>
-            <option value="1" class="optionText">1 (Strongly Disagree)</option>
-            <option value="2" class="optionText">2</option>
-            <option value="3" class="optionText">3</option>
-            <option value="4" class="optionText">4</option>
-            <option value="5" class="optionText">5 (Strongly Agree)</option>
-          </select>
-        </div> 
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
-          <h2 class="question"><b>Question 5</b></h2>
-          <h3 class="answer">It is often difficult for you to relate to other people’s feelings.</h3>
-          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q7" name="select5">
-            <option value="" class="optionText"></option>
-            <option value="1" class="optionText">1 (Strongly Disagree)</option>
-            <option value="2" class="optionText">2</option>
-            <option value="3" class="optionText">3</option>
-            <option value="4" class="optionText">4</option>
-            <option value="5" class="optionText">5 (Strongly Agree)</option>
-          </select>
-        </div> 
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
-          <h2 class="question"><b>Question 6</b></h2>
-          <h3 class="answer">In a discussion, truth should be more important than people’s sensitivities.</h3>
-          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q8" name="select6">
-            <option value="" class="optionText"></option>
-            <option value="1" class="optionText">1 (Strongly Disagree)</option>
-            <option value="2" class="optionText">2</option>
-            <option value="3" class="optionText">3</option>
-            <option value="4" class="optionText">4</option>
-            <option value="5" class="optionText">5 (Strongly Agree)</option>
-          </select>
-        </div> 
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
-          <h2 class="question"><b>Question 7</b></h2>
-          <h3 class="answer">Everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
-          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q9" name="select7">
-            <option value="" class="optionText"></option>
-            <option value="1" class="optionText">1 (Strongly Disagree)</option>
-            <option value="2" class="optionText">2</option>
-            <option value="3" class="optionText">3</option>
-            <option value="4" class="optionText">4</option>
-            <option value="5" class="optionText">5 (Strongly Agree)</option>
-          </select>
-        </div> 
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
-          <h2 class="question"><b>Question 8</b></h2>
-          <h3 class="answer">Generally speaking, you rely more on your experience than your imagination.</h3>
-          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q10" name="select8">
-            <option value="" class="optionText"></option>
-            <option value="1" class="optionText">1 (Strongly Disagree)</option>
-            <option value="2" class="optionText">2</option>
-            <option value="3" class="optionText">3</option>
-            <option value="4" class="optionText">4</option>
-            <option value="5" class="optionText">5 (Strongly Agree)</option>
-          </select>
-        </div> 
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
-          <h2 class="question"><b>Question 9</b></h2>
-          <h3 class="answer">You feel more energetic after spending time with a group of people.</h3>
-          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q11" name="select9">
-            <option value="" class="optionText"></option>
-            <option value="1" class="optionText">1 (Strongly Disagree)</option>
-            <option value="2" class="optionText">2</option>
-            <option value="3" class="optionText">3</option>
-            <option value="4" class="optionText">4</option>
-            <option value="5" class="optionText">5 (Strongly Agree)</option>
-          </select>
-        </div> 
-      </div>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
-          <h2 class="question"><b>Question 10</b></h2>
-          <h3 class="answer">You are more comfortable with intermittent moments of silence when in the company of others rather than consistent conversation</h3>
-          <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q12" name="select10">
-            <option value="" class="optionText"></option>
-            <option value="1" class="optionText">1 (Strongly Disagree)</option>
-            <option value="2" class="optionText">2</option>
-            <option value="3" class="optionText">3</option>
-            <option value="4" class="optionText">4</option>
-            <option value="5" class="optionText">5 (Strongly Agree)</option>
-          </select>
-        </div> 
-      </div>
-      <!-- hidden placeholder div for jQuery Validate error message -->
-      <div class="errorMessage text-center animated pulse infinite"><span></span></div>   
-      <br>
-      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xs-offset-3 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="surveySubmit"><i class="fa fa-check-circle" aria-hidden="true"></i> SUBMIT</button>
-      </div>          
-    </form>
-	</div>
-</section>
-<!-- Load js libs only when the page is loaded. -->
-<script src="/assets/js/vex.combined.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="assets/js/modernizr.custom.72241.js"></script>
-<script src="assets/js/chosen.jquery.js"></script>
-<script src="assets/js/jquery.validate.js"></script>
 
-<!--Main Javascript File -->
-<script src="assets/js/app.js"></script>
- 
-<!-- Custom template scripts -->
-<script src="assets/js/magister.js"></script>
+<body class="theme-invert" style="background:black url(../images/body6.jpg)">
+  <nav class="mainmenu" style="background-color: black">
+    <div class="container">
+      <div class="dropdown">
+        <button type="button" class="navbar-toggle" data-toggle="dropdown">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li>
+            <a class="dropIgnore" href="/">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main (Home) section -->
+  <section class="section surveyForm animated fadeIn" id="head">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+          <h2 class="subtitle" id="surveyTitle" style="letter-spacing: .3em; font-size: 5em">SURVEY</h2>
+          <h3 class="tagline"></h3>
+        </div>
+        <!-- /col -->
+        <!-- SURVEY FORM - 10 QUESTIONS -->
+        <form id="surveyForm">
+          <div class="row">
+            <div class="col-xs-10 col-sm-8 col-md-8 col-md-offset-2 col-lg-8 col-xs-offset-1 col-sm-offset-2 text-center questions">
+              <div class="form-group">
+                <label id="inputNameLabel" for="exampleInputEmail1">FIRST & LAST NAME</label>
+                <input type="text" class="form-control text-center" id="q1" placeholder="enter your first and last name"
+                  name="select11">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-10 col-sm-8 col-md-8 col-md-offset-2 col-lg-8 col-xs-offset-1  col-sm-offset-2 text-center questions">
+              <div class="form-group">
+                <label id="inputPhotoLabel" for="exampleInputEmail1">PHOTO</label>
+                <input type="url" class="form-control text-center inputPhoto" id="q2" placeholder="enter a URL that links to a current photo of your visage"
+                  name="select12">
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1">
+            <hr class="style12">
+          </div>
+          <div class="row firstQuestion">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+              <h2 class="question">
+                <b>Question 1</b>
+              </h2>
+              <h3 class="answer">You prefer a quiet night at home to a night out on the town</h3>
+              <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q3"
+                name="select1">
+                <option value="" class="optionText"></option>
+                <option value="1" class="optionText">1 (Strongly Disagree)</option>
+                <option value="2" class="optionText">2</option>
+                <option value="3" class="optionText">3</option>
+                <option value="4" class="optionText">4</option>
+                <option value="5" class="optionText">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+              <h2 class="question">
+                <b>Question 2</b>
+              </h2>
+              <h3 class="answer">Loud people are vexatious to the spirit</h3>
+              <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q4"
+                name="select2">
+                <option value="" class="optionText"></option>
+                <option value="1" class="optionText">1 (Strongly Disagree)</option>
+                <option value="2" class="optionText">2</option>
+                <option value="3" class="optionText">3</option>
+                <option value="4" class="optionText">4</option>
+                <option value="5" class="optionText">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+              <h2 class="question">
+                <b>Question 3</b>
+              </h2>
+              <h3 class="answer">You rarely do something just out of sheer curiosity.</h3>
+              <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q5"
+                name="select3">
+                <option value="" class="optionText"></option>
+                <option value="1" class="optionText">1 (Strongly Disagree)</option>
+                <option value="2" class="optionText">2</option>
+                <option value="3" class="optionText">3</option>
+                <option value="4" class="optionText">4</option>
+                <option value="5" class="optionText">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+              <h2 class="question">
+                <b>Question 4</b>
+              </h2>
+              <h3 class="answer">People can rarely upset you.</h3>
+              <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q6"
+                name="select4">
+                <option value="" class="optionText"></option>
+                <option value="1" class="optionText">1 (Strongly Disagree)</option>
+                <option value="2" class="optionText">2</option>
+                <option value="3" class="optionText">3</option>
+                <option value="4" class="optionText">4</option>
+                <option value="5" class="optionText">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+              <h2 class="question">
+                <b>Question 5</b>
+              </h2>
+              <h3 class="answer">It is often difficult for you to relate to other people’s feelings.</h3>
+              <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q7"
+                name="select5">
+                <option value="" class="optionText"></option>
+                <option value="1" class="optionText">1 (Strongly Disagree)</option>
+                <option value="2" class="optionText">2</option>
+                <option value="3" class="optionText">3</option>
+                <option value="4" class="optionText">4</option>
+                <option value="5" class="optionText">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+              <h2 class="question">
+                <b>Question 6</b>
+              </h2>
+              <h3 class="answer">In a discussion, truth should be more important than people’s sensitivities.</h3>
+              <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q8"
+                name="select6">
+                <option value="" class="optionText"></option>
+                <option value="1" class="optionText">1 (Strongly Disagree)</option>
+                <option value="2" class="optionText">2</option>
+                <option value="3" class="optionText">3</option>
+                <option value="4" class="optionText">4</option>
+                <option value="5" class="optionText">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+              <h2 class="question">
+                <b>Question 7</b>
+              </h2>
+              <h3 class="answer">Everyone’s views should be respected regardless of whether they are supported by facts
+                or not.</h3>
+              <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q9"
+                name="select7">
+                <option value="" class="optionText"></option>
+                <option value="1" class="optionText">1 (Strongly Disagree)</option>
+                <option value="2" class="optionText">2</option>
+                <option value="3" class="optionText">3</option>
+                <option value="4" class="optionText">4</option>
+                <option value="5" class="optionText">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+              <h2 class="question">
+                <b>Question 8</b>
+              </h2>
+              <h3 class="answer">Generally speaking, you rely more on your experience than your imagination.</h3>
+              <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q10"
+                name="select8">
+                <option value="" class="optionText"></option>
+                <option value="1" class="optionText">1 (Strongly Disagree)</option>
+                <option value="2" class="optionText">2</option>
+                <option value="3" class="optionText">3</option>
+                <option value="4" class="optionText">4</option>
+                <option value="5" class="optionText">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+              <h2 class="question">
+                <b>Question 9</b>
+              </h2>
+              <h3 class="answer">You feel more energetic after spending time with a group of people.</h3>
+              <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q11"
+                name="select9">
+                <option value="" class="optionText"></option>
+                <option value="1" class="optionText">1 (Strongly Disagree)</option>
+                <option value="2" class="optionText">2</option>
+                <option value="3" class="optionText">3</option>
+                <option value="4" class="optionText">4</option>
+                <option value="5" class="optionText">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center questions">
+              <h2 class="question">
+                <b>Question 10</b>
+              </h2>
+              <h3 class="answer">You are more comfortable with intermittent moments of silence when in the company of others
+                rather than consistent conversation</h3>
+              <select data-placeholder="SELECT A RESPONSE" class="chosen-select optionText" style="display: none" id="q12"
+                name="select10">
+                <option value="" class="optionText"></option>
+                <option value="1" class="optionText">1 (Strongly Disagree)</option>
+                <option value="2" class="optionText">2</option>
+                <option value="3" class="optionText">3</option>
+                <option value="4" class="optionText">4</option>
+                <option value="5" class="optionText">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+          <!-- hidden placeholder div for jQuery Validate error message -->
+          <div class="errorMessage text-center animated pulse infinite">
+            <span></span>
+          </div>
+          <br>
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 col-xs-offset-3 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="surveySubmit">
+              <i class="fa fa-check-circle" aria-hidden="true"></i> SUBMIT</button>
+          </div>
+        </form>
+      </div>
+  </section>
+  <!-- Load js libs only when the page is loaded. -->
+  <script src="/assets/js/vex.combined.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="assets/js/modernizr.custom.72241.js"></script>
+  <script src="assets/js/chosen.jquery.js"></script>
+  <script src="assets/js/jquery.validate.js"></script>
+
+  <!--Main Javascript File -->
+  <script src="assets/js/app.js"></script>
+
+  <!-- Custom template scripts -->
+  <script src="assets/js/magister.js"></script>
 </body>
+
 </html>

@@ -1,107 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
-	<meta name="author"      content="Brian Hummel">
+	<meta name="author" content="Brian Hummel">
 	<title>FriendFinder</title>
-	<link rel="shortcut icon" href="assets/images/gt_favicon.png">	
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	<!-- Bootstrap itself -->
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<!-- Custom styles -->
-  <link rel="stylesheet" href="assets/css/magister.css"> 
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="assets/css/animate.css"> 
-  <!-- Font Awesome CDN-->
-  <script src="https://use.fontawesome.com/c38831e163.js"></script>
+	<link rel="stylesheet" href="assets/css/magister.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- Font Awesome CDN-->
+	<script src="https://use.fontawesome.com/c38831e163.js"></script>
 	<!-- Fonts -->
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+	  type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 </head>
+
 <body class="theme-invert animated fadeIn bodyFade">
-<nav class="mainmenu">
-	<div class="container">
-		<div class="dropdown">
-			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
-			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<li><a href="#head" class="active">HOME</a></li>
-				<li><a href="#about">ABOUT</a></li>
-				<li><a href="#contact">CONTACT</a></li>
-				<li><a href="/api/friends">FRIENDS JSON</a></li>
-				<li><a href="/api/potentialfriends">POTENTIAL FRIENDS</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-<!-- Main (Home) section -->
-<section class="section" id="head">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
-				<!-- Site Title, your name, HELLO msg, etc. -->
-				<h1 class="title">FRIEND</h1>
-				<h1 class="title">FINDER</h1>
-				<h2 class="subtitle">for the hopelessly forlorn</h2>
-				<!-- Short introductory (optional) -->
-				<h3 class="tagline">
-					complete a simple online survey and bid farewell to the desolation that haunts you 
-				</h3>
-				<!-- Nice place to describe your site in a sentence or two -->
-				<p><a href="/survey" class="surveyStart btn btn-default btn-lg animated pulse infinite">Start Survey</a></p>	
-			</div> <!-- /col -->
-		</div> <!-- /row -->
-	</div>
-</section>
-<!-- Second (About) section -->
-<section class="section" id="about">
-	<div class="container">
-		<h2 class="text-center title">WHY ?</h2>
-		<div class="row">
-			<div class="col-sm-4 col-sm-offset-2">    
-				<h5><strong>WHY FRIEND FINDER?<br></strong></h5>
-				<p>Crushing solitude and your inveterate social ineptitude joined forces and petitioned the web development gods to design a digital scapegoat unto which all blame and shame can be directed as you drift ever deeper into the desert of lonesomeness.</p>    
-			</div>
-			<div class="col-sm-3">
-				<h5><strong>WILL IT WORK?<br></strong></h5>    
-				<p>Yes, the application is in good health and fully operational.</p> 
-				<h5><strong>WILL IT LAST?<br></strong></h5>    
-				<p>It takes a long time to grow an old friend.</p>  
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Third (Contact) section -->
-<section class="section" id="contact">
-	<div class="container">	
-		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-log-offset-1 text-center">
-				<h2 class="text-center title">CONTACT</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-log-offset-1 text-center">
-				<p class="lead">INTERESTED IN LEARNING MORE OR HAVE A QUESTION ?</p>
-				<p>Please feel free to reach out via email</p>
-				<p><a href="mailto:brianpatrickhummel@mac.com"><b>brianpatrickhummel@mac.com</b><br><br></a></p>
-				<p>Visit me at:</p>
-				<p><a href="http://www.brianpatrickhummel.com"><b>www.brianpatrickhummel.com</b><br><br></a></p>
-				<ul class="list-inline list-social">
-					<li><a href="https://github.com/brianpatrickhummel" target="_blank" class="btn btn-link" style="color: rgba(255,255,255,0.5); font-family: 'Wire One'; font-weight: 800; letter-spacing: .2em; font-size: 1.5em;"><i class="fa fa-github fa-fw fa-2x fa-inverse hovFade"></i> </a></li>
-					<li><a href="https://stackoverflow.com/users/7560339/brian-patrick-hummel" target="_blank" class="btn btn-link" style="color: rgba(255,255,255,0.5); font-family: 'Wire One'; font-weight: 800; letter-spacing: .2em; font-size: 1.5em;"><i class="fa fa-stack-overflow fa-fw fa-2x fa-inverse hovFade"></i>  </a></li>
-					<li><a href="https://www.linkedin.com/in/brianpatrickhummel/" target="_blank" class="btn btn-link" style="color: rgba(255,255,255,0.5); font-family: 'Wire One'; font-weight: 800; letter-spacing: .2em; font-size: 1.5em;"><i class="fa fa-linkedin fa-fw fa-2x fa-inverse hovFade"></i>  </a></li>
+	<nav class="mainmenu">
+		<div class="container">
+			<div class="dropdown">
+				<button type="button" class="navbar-toggle" data-toggle="dropdown">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+					<li>
+						<a href="#head" class="active">HOME</a>
+					</li>
+					<li>
+						<a href="#about">ABOUT</a>
+					</li>
+					<li>
+						<a href="#contact">CONTACT</a>
+					</li>
+					<li>
+						<a href="/api/friends">FRIENDS JSON</a>
+					</li>
+					<li>
+						<a href="/api/potentialfriends">POTENTIAL FRIENDS</a>
+					</li>
 				</ul>
 			</div>
 		</div>
+	</nav>
+	<!-- Main (Home) section -->
+	<section class="section" id="head">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+					<!-- Site Title, your name, HELLO msg, etc. -->
+					<h1 class="title">FRIEND</h1>
+					<h1 class="title">FINDER</h1>
+					<h2 class="subtitle">for the hopelessly forlorn</h2>
+					<!-- Short introductory (optional) -->
+					<h3 class="tagline">
+						complete a simple online survey and bid farewell to the desolation that haunts you
+					</h3>
+					<!-- Nice place to describe your site in a sentence or two -->
+					<p>
+						<a href="/survey" class="surveyStart btn btn-default btn-lg animated pulse infinite">Start Survey</a>
+					</p>
+				</div>
+				<!-- /col -->
+			</div>
+			<!-- /row -->
+		</div>
+	</section>
+	<!-- Second (About) section -->
+	<section class="section" id="about">
+		<div class="container">
+			<h2 class="text-center title">WHY ?</h2>
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-2">
+					<h5>
+						<strong>WHY FRIEND FINDER?
+							<br>
+						</strong>
+					</h5>
+					<p>Crushing solitude and your inveterate social ineptitude joined forces and petitioned the web development
+						gods to design a digital scapegoat unto which all blame and shame can be directed as you drift
+						ever deeper into the desert of lonesomeness.</p>
+				</div>
+				<div class="col-sm-3">
+					<h5>
+						<strong>WILL IT WORK?
+							<br>
+						</strong>
+					</h5>
+					<p>Yes, the application is in good health and fully operational.</p>
+					<h5>
+						<strong>WILL IT LAST?
+							<br>
+						</strong>
+					</h5>
+					<p>It takes a long time to grow an old friend.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Third (Contact) section -->
+	<section class="section" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-log-offset-1 text-center">
+					<h2 class="text-center title">CONTACT</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-log-offset-1 text-center">
+					<p class="lead">INTERESTED IN LEARNING MORE OR HAVE A QUESTION ?</p>
+					<p>Please feel free to reach out via email</p>
+					<p>
+						<a href="mailto:brianpatrickhummel@mac.com">
+							<b>brianpatrickhummel@mac.com</b>
+							<br>
+							<br>
+						</a>
+					</p>
+					<p>Visit me at:</p>
+					<p>
+						<a href="http://www.brianpatrickhummel.com">
+							<b>www.brianpatrickhummel.com</b>
+							<br>
+							<br>
+						</a>
+					</p>
+					<ul class="list-inline list-social">
+						<li>
+							<a href="https://github.com/brianpatrickhummel" target="_blank" class="btn btn-link" style="color: rgba(255,255,255,0.5); font-family: 'Wire One'; font-weight: 800; letter-spacing: .2em; font-size: 1.5em;">
+								<i class="fa fa-github fa-fw fa-2x fa-inverse hovFade"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://stackoverflow.com/users/7560339/brian-patrick-hummel" target="_blank" class="btn btn-link"
+							  style="color: rgba(255,255,255,0.5); font-family: 'Wire One'; font-weight: 800; letter-spacing: .2em; font-size: 1.5em;">
+								<i class="fa fa-stack-overflow fa-fw fa-2x fa-inverse hovFade"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/brianpatrickhummel/" target="_blank" class="btn btn-link"
+							  style="color: rgba(255,255,255,0.5); font-family: 'Wire One'; font-weight: 800; letter-spacing: .2em; font-size: 1.5em;">
+								<i class="fa fa-linkedin fa-fw fa-2x fa-inverse hovFade"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-	</div>
-</section>
-<!-- Load js libs only when the page is loaded. -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="assets/js/modernizr.custom.72241.js"></script>
-<!-- Custom template scripts -->
-<script src="assets/js/magister.js"></script>
+		</div>
+	</section>
+	<!-- Load js libs only when the page is loaded. -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="assets/js/modernizr.custom.72241.js"></script>
+	<!-- Custom template scripts -->
+	<script src="assets/js/magister.js"></script>
 </body>
+
 </html>
